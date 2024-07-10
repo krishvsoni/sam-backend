@@ -385,8 +385,8 @@ app.get('/getResult/:msgid', async (req, res) => {
   }
 });
 
-app.post('/getProcesses', async (req, res) => {
-  const { address } = req.body;
+app.get('/getProcesses/:address', async (req, res) => {
+  const { address } = req.params.address;
 
   // Construct the GraphQL query
   const query = gql`
