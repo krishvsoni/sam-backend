@@ -448,7 +448,7 @@ app.post('/setupCRON', async (req, res) => {
     // Function to fetch messages and store them in the database
     const fetchAndStoreMessages = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/getMessages/${entity}`);
+        const response = await axios.get(`https://sam-backend-yf1o.onrender.com/getMessages/${entity}`);
         const messages = response.data.filteredData;
 
         // Check if messages is an array
